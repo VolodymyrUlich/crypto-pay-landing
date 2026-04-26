@@ -1,0 +1,70 @@
+@use "@/styles/breakpoints" as *;
+@use "@/styles/variables" as *;
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: $fs-base;
+  font-weight: 500;
+  line-height: $lh-sm;
+  letter-spacing: 0%;
+  border-radius: $border-radius-round;
+  transition: all 0.2s ease-in-out;
+  padding: 12px 32px;
+
+
+  @media (min-width: $lg-breakpoint) {
+    font-size: $fs-md;
+    padding: 18px 45px;
+  }
+}
+
+.primary {
+  background-color: var(--btn-primary-bg);
+  color: var(--btn-primary-color);
+  border: var(--btn-primary-border);
+
+  &:hover {
+    background-color: var(--btn-primary-hover-bg);
+    color: var(--btn-primary-hover-color);
+    border: var(--btn-primary-hover-border);
+  }
+}
+
+.secondary {
+  background-color: var(--btn-secondary-bg);
+  color: var(--btn-secondary-color);
+  border: var(--btn-secondary-border);
+
+  &:hover {
+    background-color: var(--btn-secondary-hover-bg);
+    color: var(--btn-secondary-hover-color);
+    border: var(--btn-secondary-hover-border);
+  }
+}
+
+.transparent {
+  background-color: transparent;
+  color: $color-white;
+  border: 1px solid #ffffff99;
+
+  &:hover {
+    background-color: transparent;
+    color: inherit;
+    border: 1px solid $color-white;
+  }
+}
+
+.ghost {
+  background-color: transparent;
+  color: inherit;
+  border: none;
+  padding: 0;
+  border-radius: 0;
+  font-size: inherit;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}

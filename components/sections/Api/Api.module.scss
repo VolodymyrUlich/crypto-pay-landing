@@ -1,0 +1,64 @@
+@use "@/styles/breakpoints" as *;
+@use "@/styles/variables" as *;
+
+
+.api {
+  color: $color-white;
+  padding: 80px 0;
+
+  @media (min-width: $lg-breakpoint) {
+    padding: 120px 0;
+  }
+}
+
+.card {
+  padding: 291px 32px 28px 32px;
+  border-radius: 24px;
+  background-image: url('/images/api-mobile.webp');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media(min-width: $md-breakpoint) {
+    background-image: url('/images/api-desktop.webp');
+    padding: 147px 0 147px 80px;
+    border-radius: 40px;
+  }
+
+  &Inner {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 375px;
+
+    @media(min-width: $lg-breakpoint) {
+      gap: 32px;
+      max-width: 410px;
+    }
+  }
+}
+
+.title {
+  text-align: left;
+  font-size: $fs-2xl;
+  font-weight: 600;
+  line-height: $lh-xs;
+
+  @media(min-width: $lg-breakpoint) {
+    font-size: $fs-5xl;
+  }
+}
+
+.subtitle {
+  font-weight: 400;
+
+  @media(min-width: $lg-breakpoint) {
+    font-size: $fs-md;
+  }
+}
+
+.button {
+  @media(min-width: $md-breakpoint) {
+    max-width: max-content;
+  }
+}

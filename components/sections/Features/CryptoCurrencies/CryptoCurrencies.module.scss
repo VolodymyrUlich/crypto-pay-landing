@@ -1,0 +1,106 @@
+@use "@/styles/breakpoints" as *;
+@use "@/styles/variables" as *;
+
+
+.card {
+  padding: 32px;
+  background-color: var(--bg-color-secondary);
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  @media(min-width: $lg-breakpoint) {
+    flex-direction: column-reverse;
+    padding: 42px 56px;
+  }
+}
+
+.cryptoCurrencies {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+
+  @media(min-width: $lg-breakpoint) {
+    justify-content: space-between;
+    margin-bottom: 0;
+  }
+
+  &Item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+
+    @for $i from 1 through 8 {
+      &:nth-child(#{$i}) img {
+        animation-delay: #{($i - 1) * 0.5}s;
+      }
+    }
+
+    @keyframes crypto-wave {
+      0% {
+        transform: scale(1);
+      }
+
+      10% {
+        transform: scale(1.2);
+      }
+
+      20% {
+        transform: scale(1);
+      }
+
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    img {
+      animation: crypto-wave 4s infinite ease-in-out;
+      width: 56px;
+
+      @media(min-width: $lg-breakpoint) {
+        width: 96px;
+      }
+    }
+
+    span {
+      display: none;
+      font-size: $fs-xs;
+      letter-spacing: 0%;
+      color: #A3A7AE;
+
+      @media(min-width: $lg-breakpoint) {
+        display: block;
+      }
+    }
+  }
+}
+
+.title {
+  margin-bottom: 16px;
+  font-weight: 600;
+  font-size: $fs-xl;
+  line-height: $lh-xs;
+  letter-spacing: -3%;
+
+  @media(min-width: $lg-breakpoint) {
+    font-size: $fs-3xl;
+    margin-bottom: 20px;
+  }
+}
+
+.subtitle {
+  color: var(--color-translucent);
+  font-weight: 400;
+  letter-spacing: 0%;
+
+  @media(min-width: $lg-breakpoint) {
+    font-size: $fs-md;
+    margin-bottom: 42px;
+  }
+}

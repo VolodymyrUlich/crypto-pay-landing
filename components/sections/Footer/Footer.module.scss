@@ -1,0 +1,56 @@
+@use "@/styles/breakpoints" as *;
+@use "@/styles/variables" as *;
+
+
+.footer {
+    background-color: var(--bg-color-dark);
+    color: $color-white;
+    padding: 40px 0 30px 0;
+
+    @media (min-width: $lg-breakpoint) {
+        font-size: $fs-md;
+        padding: 80px 0 40px 0;
+    }
+}
+
+.inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 13px;
+    margin-bottom: 33px;
+
+    @media (min-width: $md-breakpoint) {
+        align-items: center;
+    }
+}
+
+.logo {
+    width: 46px;
+    height: 46px;
+
+    @media (min-width: $lg-breakpoint) {
+        width: 64px;
+        height: 64px;
+    }
+}
+
+.copyright {
+    letter-spacing: 0%;
+}
+
+.center {
+    display: none;
+
+    @media (min-width: $md-breakpoint) {
+        display: flex;
+        gap: 32px;
+        margin-left: 20px;
+        letter-spacing: 0%;
+    }
+}
+
+.right {
+    flex-shrink: 1;
+    flex-grow: 0;
+}

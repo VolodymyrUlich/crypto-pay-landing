@@ -1,0 +1,96 @@
+// Static Variables
+
+//Colors
+$color-brand-blue: #41a4df;
+$color-white: #ffffff;
+$color-black: #0d0d12;
+$color-dark: #18181D;
+$color-blue: #297EE2;
+
+//Border radius
+$border-radius-round: 900px;
+
+// Font sizes
+$fs-xs: 14px;
+$fs-sm: 16px;
+$fs-base: 18px;
+$fs-md: 20px;
+$fs-lg: 24px;
+$fs-xl: 28px;
+$fs-2xl: 32px;
+$fs-3xl: 42px;
+$fs-4xl: 46px;
+$fs-5xl: 56px;
+$fs-6xl: 65px;
+
+// Line heights
+$lh-xs: 1.1;
+$lh-sm: 1.2;
+
+html.light {
+  // Base Colors
+  --bg-color-primary: #{$color-white};
+  --txt-color-primary: #{$color-black};
+
+  --bg-color-secondary: #F7F9FB;
+
+
+  // Button - Primary Variant
+  --btn-primary-bg: #{$color-brand-blue};
+  --btn-primary-color: #{$color-white};
+  --btn-primary-hover-color: #{$color-white};
+  --btn-primary-hover-bg: #{$color-blue};
+
+  // Button - Secondary Variant
+  --btn-secondary-bg: #{$color-blue}1f;
+  --btn-secondary-color: #{$color-blue};
+  --btn-secondary-hover-color: #{$color-blue};
+  --btn-secondary-hover-bg: #{$color-brand-blue}29;
+
+  // Bots border
+  --bots-border: #{$color-white};
+
+  // Steps
+  --step-bg-color: linear-gradient(220deg, #010417 10.26%, #2b333f 84.25%),
+    linear-gradient(46deg, #000 15.89%, #434343 171.16%);
+  --step-color: #{$color-white};
+
+
+  // Shared
+  --color-translucent: #111111cc;
+
+  --bg-color-dark: #232328;
+}
+
+html.dark {
+  // Base Colors
+  --bg-color-primary: #{$color-black};
+  --txt-color-primary: #{$color-white};
+
+  --bg-color-secondary: #{$color-dark};
+
+
+  // Button - Primary Variant
+  --btn-primary-bg: #{$color-brand-blue};
+  --btn-primary-color: #{$color-white};
+  --btn-primary-hover-bg: #{$color-blue};
+
+  // Button - Secondary Variant
+  --btn-secondary-bg: transparent;
+  --btn-secondary-color: #{$color-white};
+  --btn-secondary-border: 1px solid #{$color-white}99;
+  --btn-secondary-hover-border: 1px solid #{$color-white};
+
+  // Bots border
+  --bots-border: #{$color-black};
+
+  // Steps
+  --step-bg-color: #{$color-white};
+  --step-color: #{$color-black};
+
+
+  //Shared
+  --color-translucent: #{$color-white}CC;
+
+  --bg-color-dark: #{$color-dark};
+}

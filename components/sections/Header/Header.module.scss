@@ -1,0 +1,57 @@
+@use "@/styles/breakpoints" as *;
+@use "@/styles/variables" as *;
+
+.header {
+  padding: 50px 0 50px 0;
+  text-wrap: nowrap;
+
+  @media (min-width: $lg-breakpoint) {
+    padding: 40px 0 60px 0;
+  }
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+.headerLogo {
+  width: 44px;
+  height: 44px;
+
+  @media (min-width: $lg-breakpoint) {
+    width: 64px;
+    height: 64px;
+    margin-right: 186px;
+  }
+}
+
+.navBar {
+  display: none;
+
+  @media (min-width: $sm-breakpoint) {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    font-size: $fs-sm;
+  }
+
+  @media (min-width: $lg-breakpoint) {
+    font-size: $fs-md;
+  }
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.themeToggler {
+  @media (min-width: $lg-breakpoint) {
+    width: 32px;
+    height: 32px;
+  }
+}
